@@ -33,6 +33,8 @@ func (e *APIError) Error() string {
 	return fmt.Sprintf("API Error, %+v", e.Response)
 }
 
+// TODO: Having several types is useless and just adds types assertion overhead to consumers.
+
 // Autobanned defines model for HTTP `418` (Auto Banned).
 type AutoBanned struct {
 	Error      string `json:"error"`
